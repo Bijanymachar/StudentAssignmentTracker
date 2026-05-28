@@ -1,3 +1,10 @@
+// ============================================
+// Module: Dashboard & Statistics
+// Implemented by: Bijany Machar Diar
+// Reg No: BAIT/24D/SS/A0021
+// Date:28 May 2026
+// ============================================
+
 package com.group.studentassignmenttracker
 
 import android.os.Bundle
