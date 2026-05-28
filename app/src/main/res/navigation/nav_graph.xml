@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.group.studentassignmenttracker.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_list"
+            app:destination="@id/assignmentListFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_add"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assignmentListFragment"
+        android:name="com.group.studentassignmenttracker.AssignmentListFragment"
+        android:label="My Assignments"
+        tools:layout="@layout/fragment_assignment_list">
+        <action
+            android:id="@+id/action_list_to_add"
+            app:destination="@id/addEditFragment" />
+        <action
+            android:id="@+id/action_list_to_edit"
+            app:destination="@id/addEditFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="com.group.studentassignmenttracker.AddEditFragment"
+        android:label="Add Assignment"
+        tools:layout="@layout/fragment_add_edit">
+        <argument
+            android:name="assignmentId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+</navigation>
